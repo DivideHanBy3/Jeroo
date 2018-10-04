@@ -1,0 +1,55 @@
+@Java
+method flower()
+{
+   while(!isFlower(AHEAD))
+   {
+      if(isWater(RIGHT))
+      {
+         plant();
+         hop();
+      }
+      if(!isWater(RIGHT))   
+      {
+      turn(RIGHT);
+      plant();
+      hop();
+      }
+   }
+}
+
+method find()
+{
+   while(hasFlower())
+   {
+      if(!isWater(AHEAD))
+      {
+      hop();
+      }
+      if(isWater(AHEAD) && isFacing(EAST))
+      {
+         turn(RIGHT);
+         hop();
+         turn(RIGHT);
+      }
+         else
+         if(isWater(AHEAD) && isFacing(WEST))
+         {
+            turn(LEFT);
+            turn(LEFT);
+         }
+      if(isWater(RIGHT) && !isFlower(AHEAD))
+      {
+      flower();
+      }
+   }
+}
+@@
+method main()
+{
+   Jeroo avoid = new Jeroo(144);
+   avoid.find();
+   avoid.hop(4);
+   avoid.turn(RIGHT);
+   avoid.hop(5);
+   avoid.turn(RIGHT);
+}

@@ -1,0 +1,16 @@
+@Java
+
+@@
+method main()
+{
+   Jeroo a = new Jeroo(500);
+   while(!a.isFlower(AHEAD))
+   {
+      while(!a.isWater(AHEAD))
+      {
+      a.plant();
+      a.hop();
+      }
+      a.turn(RIGHT);
+   }
+}

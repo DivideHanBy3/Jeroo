@@ -1,0 +1,14 @@
+@Java
+
+@@
+//(c) A+ Computer Science
+
+method main()
+{
+  Jeroo loopy = new Jeroo(10);
+  while ( loopy.hasFlower() ) 
+  {
+      loopy.plant();
+      loopy.hop();
+   }  
+} 

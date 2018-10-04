@@ -1,0 +1,24 @@
+@Java
+method anothercircle()
+{
+   if(!isFlower(AHEAD))
+   {
+      if(!isWater(AHEAD))
+      {
+         hop();
+         plant();
+      }
+      if(isWater(AHEAD))
+      {
+      turn(RIGHT);
+      }
+      anothercircle();
+   }
+}
+@@
+method main()
+{
+   Jeroo barbeque = new Jeroo(92);
+   barbeque.plant();
+   barbeque.anothercircle();
+}

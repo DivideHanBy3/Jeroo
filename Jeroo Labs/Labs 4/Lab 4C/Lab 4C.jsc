@@ -1,0 +1,63 @@
+@Java
+method barbeque()
+{
+   if(isNet(AHEAD))
+   {
+      turn(RIGHT);
+      hop(2);
+      barbeque();
+   }
+   if(isNet(LEFT))
+   {
+      turn(RIGHT);
+      hop(1);
+      barbeque();
+   }
+   if(isNet(RIGHT))
+   {
+      hop(3);
+      barbeque();
+   }
+   if(isFlower(LEFT))
+   {
+      turn(RIGHT);
+      hop(1);
+      barbeque();
+   }
+   if(isFlower(RIGHT))
+   {
+      hop(1);
+      barbeque();
+   }
+   if(isWater(LEFT))
+   {
+      hop(2);
+      barbeque();
+   }
+   if(isWater(RIGHT))
+   {
+      turn(LEFT);
+      hop(2);
+      barbeque();
+   }
+   if(isWater(AHEAD))
+   {
+      turn(RIGHT);
+      hop(4);
+      barbeque();
+   }
+   else 
+   {
+   hop(2);
+   }
+   if(!(isFlower(AHEAD) && isFacing(EAST)))
+   {
+   barbeque();
+   }
+}
+@@
+method main()
+{
+   Jeroo eyeball = new Jeroo(1);
+   eyeball.barbeque();
+}

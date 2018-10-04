@@ -1,0 +1,78 @@
+@Java
+method ganggang()
+{
+   if(!isWater(AHEAD))
+   {
+      if(isFlower(RIGHT))
+      {
+      turn(RIGHT);
+      hop();
+      pick();
+      turn(RIGHT);
+      turn(RIGHT);
+      hop();
+      turn(RIGHT);
+      }
+      if(isFlower(LEFT))
+      {
+      turn(LEFT);
+      hop();
+      pick();
+      turn(LEFT);
+      turn(LEFT);
+      hop();
+      turn(LEFT);
+      }
+      if(isNet(RIGHT))
+      {
+      turn(RIGHT);
+      toss();
+      hop();
+      plant();
+      turn(LEFT);
+      turn(LEFT);
+      hop();
+      turn(RIGHT);
+      }
+      if(isNet(LEFT))
+      {
+      turn(LEFT);
+      toss();
+      hop();
+      plant();
+      turn(RIGHT);
+      turn(RIGHT);
+      hop();
+      turn(LEFT);
+      }
+      if(isWater(LEFT))
+      {
+      turn(RIGHT);
+      hop();
+      plant();
+      turn(LEFT);
+      turn(LEFT);
+      hop();
+      turn(RIGHT);
+      }
+      if(isWater(RIGHT))
+      {
+      turn(LEFT);
+      hop();
+      plant();
+      turn(RIGHT);
+      turn(RIGHT);
+      hop();
+      turn(LEFT);
+      }
+      hop();
+      ganggang();
+   }
+}
+@@
+method main()
+{
+   Jeroo gang = new Jeroo(1,0, EAST, 14);
+   gang.ganggang();
+}
+   

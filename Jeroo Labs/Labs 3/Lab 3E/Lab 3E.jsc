@@ -1,0 +1,54 @@
+@Java
+method walk()
+{
+   while(!isWater(AHEAD))
+      {
+      hop();
+      }
+}
+
+method nets()
+{
+   while(isFlower(AHEAD))
+   {
+      if(isFlower(AHEAD))
+      {
+         hop();
+         pick();
+         turn(RIGHT);
+         toss();
+         turn(LEFT);
+      }
+   }
+   hop();
+   turn(RIGHT);
+   hop();
+}
+@@
+method main()
+{
+   Jeroo free = new Jeroo();
+   Jeroo aaa = new Jeroo(10,11);
+   Jeroo bbb = new Jeroo(13,12);
+   Jeroo ccc = new Jeroo(15,9);
+   free.hop(4);
+   free.turn(RIGHT);
+   free.hop(3);
+   free.turn(LEFT);
+   free.nets();
+   free.nets();
+   free.nets();
+   free.nets();
+   free.turn(RIGHT);
+   free.hop();
+   free.turn(LEFT);
+   free.hop();
+   free.nets();
+   free.nets();
+   free.nets();
+   free.nets();
+   free.walk();
+   aaa.walk();
+   bbb.walk();
+   ccc.walk();
+}

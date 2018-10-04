@@ -1,0 +1,16 @@
+@Java
+method Flower()
+   {
+   plant();
+   hop(10);
+   turn(RIGHT);
+   }
+@@
+method main()
+   {
+   Jeroo Square = new Jeroo(0,0, EAST, 500);
+   Square.Flower();
+   Square.Flower();
+   Square.Flower();
+   Square.Flower();
+   }

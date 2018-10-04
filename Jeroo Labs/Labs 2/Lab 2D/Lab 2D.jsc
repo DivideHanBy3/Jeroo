@@ -1,0 +1,38 @@
+@Java
+method wall()
+   {
+   plant();
+   hop();
+   plant();
+   hop();
+   plant();
+   hop();
+   plant();
+   hop();
+   plant();
+   hop();
+   plant();
+   hop();
+   plant();
+   hop();
+   plant();
+   hop();
+   turn(RIGHT);
+   }
+@@
+method main()
+   {
+   Jeroo Ring = new Jeroo(0,0, EAST, 100);
+   Ring.hop(7);
+   Ring.turn(RIGHT);
+   Ring.hop(4);
+   Ring.turn(LEFT);
+   Ring.wall();
+   Ring.hop();
+   Ring.wall();
+   Ring.hop();
+   Ring.wall();
+   Ring.hop();
+   Ring.wall();
+   Ring.hop(16);
+   }

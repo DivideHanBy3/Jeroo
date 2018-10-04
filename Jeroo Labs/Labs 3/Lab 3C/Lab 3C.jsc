@@ -1,0 +1,34 @@
+@Java
+method boy()
+{
+   while(!isFlower(AHEAD))
+      {
+      if(!isWater(AHEAD))
+      {
+         hop();
+      }
+      else
+      turn(RIGHT);
+      }
+      }
+
+method yob()
+{
+   while(!isWater(AHEAD) || !isNet(LEFT))
+      {
+      if(!isNet(AHEAD) &&  !isWater(AHEAD))
+      {
+         hop();
+      }
+      else
+      turn(LEFT);
+      }
+      }
+@@
+method main()
+{
+   Jeroo boi = new Jeroo();
+   boi.boy();
+   boi.turn(RIGHT);
+   boi.yob();
+}

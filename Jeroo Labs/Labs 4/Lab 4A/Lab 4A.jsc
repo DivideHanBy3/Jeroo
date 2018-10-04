@@ -1,0 +1,29 @@
+@Java
+method escape()
+{
+   if(!isWater(AHEAD) || !isWater(RIGHT) || !isWater(LEFT))
+   {
+      if(!isWater(AHEAD))
+      {
+         hop();
+      }
+      if(isWater(RIGHT) && isWater(AHEAD) && !isWater(LEFT))
+      {
+         turn(LEFT);
+      }
+      if(isWater(AHEAD) && isWater(LEFT) && !isWater(RIGHT))
+      {
+         turn(RIGHT);
+      }
+      escape();
+   }
+}
+@@
+method main()
+{
+   Jeroo wakemeup = new Jeroo();
+   wakemeup.escape();
+   wakemeup.turn(LEFT);
+   wakemeup.turn(LEFT);
+   wakemeup.escape();
+}

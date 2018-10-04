@@ -1,0 +1,19 @@
+@Java
+
+@@
+//(c) A+ Computer Science
+
+method main()
+{
+
+  Jeroo bobby = new Jeroo();
+  while(!bobby.isFlower(AHEAD)) 
+  {
+      while(bobby.isClear(AHEAD))
+      {
+         bobby.hop();
+      }
+      bobby.turn(RIGHT);
+  }
+  
+} 

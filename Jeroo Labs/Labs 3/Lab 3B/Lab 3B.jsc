@@ -1,0 +1,38 @@
+@Java
+method movedown()
+{
+   if(isFacing(EAST))
+   {
+      turn(RIGHT);
+      hop();
+      pick();
+      turn(RIGHT);
+   }
+      else
+      if(isFacing(WEST))
+      {
+         turn(LEFT);
+         hop();
+         pick();
+         turn(LEFT);
+      }
+}
+@@
+method main()
+{
+   Jeroo b = new Jeroo(1);
+   while(!b.isWater(AHEAD) || !b.isWater(LEFT) || !b.isFacing(WEST))
+   {
+      if(!b.isWater(AHEAD))
+         {
+         b.pick();
+         b.hop();
+         b.pick();
+      }
+      else
+      if(b.isWater(AHEAD))
+         {
+         b.movedown();
+         }
+      }
+   }

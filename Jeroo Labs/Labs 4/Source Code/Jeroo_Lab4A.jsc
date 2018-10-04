@@ -1,0 +1,20 @@
+@Java
+//(c) A+ Computer Science
+
+  //make the Jeroo face the pathway
+method facePath()
+{
+}
+
+  //make the Jeroo solve the maze
+  //and move to the center 
+method solveMaze()
+{
+}
+
+@@
+// (c) A+ Computer Science
+
+method main()
+{
+}
