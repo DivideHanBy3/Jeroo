@@ -1,59 +1,49 @@
 @Java
 method barbeque()
 {
+while(!isFlower(AHEAD))
+{
    if(isNet(AHEAD))
    {
       turn(RIGHT);
       hop(2);
-      barbeque();
    }
-   if(isNet(LEFT))
+   else if(isNet(LEFT))
    {
       turn(RIGHT);
-      hop(1);
-      barbeque();
+      hop(1);     
    }
-   if(isNet(RIGHT))
+   else if(isNet(RIGHT))
    {
       hop(3);
-      barbeque();
    }
-   if(isFlower(LEFT))
+   else if(isFlower(LEFT))
    {
       turn(RIGHT);
-      hop(1);
-      barbeque();
    }
-   if(isFlower(RIGHT))
+   else if(isFlower(RIGHT))
    {
       hop(1);
-      barbeque();
    }
-   if(isWater(LEFT))
+   else if(isWater(LEFT))
    {
       hop(2);
-      barbeque();
    }
-   if(isWater(RIGHT))
+   else if(isWater(RIGHT))
    {
       turn(LEFT);
       hop(2);
-      barbeque();
    }
-   if(isWater(AHEAD))
+   else if(isWater(AHEAD))
    {
       turn(RIGHT);
       hop(4);
-      barbeque();
    }
    else 
    {
    hop(2);
    }
-   if(!(isFlower(AHEAD) && isFacing(EAST)))
-   {
-   barbeque();
-   }
+}
 }
 @@
 method main()
