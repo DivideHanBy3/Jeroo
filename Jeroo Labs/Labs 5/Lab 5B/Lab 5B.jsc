@@ -1,0 +1,34 @@
+@Java
+method find()
+{
+   while(!isJeroo(AHEAD) && !(isWater(AHEAD) && isFlower(RIGHT) && isFlower(LEFT)))
+   {
+      if(!isClear(RIGHT) && !isClear(LEFT))
+      {
+         hop();
+      }
+      else if(isClear(LEFT))
+      {
+      turn(LEFT);
+      hop();
+      }
+      else if(isClear(RIGHT))
+      {
+      turn(RIGHT);
+      hop();
+      }
+   }
+}
+@@
+method main()
+{
+   Jeroo barney = new Jeroo(1,0);
+   Jeroo betty = new Jeroo(12,11,WEST);
+   barney.find();
+   barney.turn(RIGHT);
+   barney.turn(RIGHT);
+   barney.find();
+   betty.find();
+   barney.turn(RIGHT);
+   barney.turn(RIGHT);
+}

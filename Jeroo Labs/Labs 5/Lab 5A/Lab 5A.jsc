@@ -1,0 +1,21 @@
+@Java
+method spinmeroundrightround()
+{
+   while(!(isWater(AHEAD) && isWater(RIGHT)))
+   {
+      if(isClear(AHEAD))
+      {
+         hop();
+      }
+      else
+      {
+      turn(RIGHT);
+      }
+   }
+}
+@@
+method main()
+{
+   Jeroo spinmeround = new Jeroo(1,0);
+   spinmeround.spinmeroundrightround();
+}
