@@ -18,6 +18,11 @@ method find()
       hop();
       }
    }
+   if(!isWater(RIGHT) || !isFlower(LEFT))
+   {
+   turn(RIGHT);
+   turn(RIGHT);
+   }
 }
 @@
 method main()
@@ -25,10 +30,6 @@ method main()
    Jeroo barney = new Jeroo(1,0);
    Jeroo betty = new Jeroo(12,11,WEST);
    barney.find();
-   barney.turn(RIGHT);
-   barney.turn(RIGHT);
    barney.find();
    betty.find();
-   barney.turn(RIGHT);
-   barney.turn(RIGHT);
 }
